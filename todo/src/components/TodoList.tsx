@@ -4,7 +4,7 @@ import TodoListItem from "./TodoListItem";
 
 const TodoList = () => {
   const todos: Todo[] = [
-    { id: 1, title: "ir ao supermercado", done: false },
+    { id: 1, title: "ir ao supermercado", done: true },
     { id: 2, title: "Ir a academia", done: false },
   ];
 
@@ -20,7 +20,7 @@ const TodoList = () => {
       </thead>
       <tbody>
         {todos?.map((todo) => (
-          <TodoListItem key={todo.id} />
+          <TodoListItem key={todo.id} todo={todo} />
         ))}
       </tbody>
     </table>
